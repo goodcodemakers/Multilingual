@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다국어 지원 페이지</title>
+    <style>
+      /*상단 플로팅 바 옵션 가리기  */
+      body {
+        position: static !important;
+        top: 0px !important;
+      }
+      iframe.goog-te-banner-frame {
+        display: none !important;
+      }
+      .goog-logo-link {
+        display: none !important;
+      }
+      .goog-te-gadget {
+        color: transparent !important;
+        overflow: hidden;
+      }
+      .goog-te-balloon-frame {
+        display: none !important;
+      }
+      .goog-te-gadget {
+        outline: 2px solid #333;
+        display: inline-block;
+        padding: 3px 5px;
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      .goog-te-gadget,
+      .goog-te-gadget-simple {
+        border-style: none !important;
+      }
+
+      .goog-te-gadget-simple img {
+        display: none;
+      }
+
+      .goog-te-menu-value span:nth-of-type(1) {
+        margin-right: 1rem;
+      }
+
+      .goog-te-menu-value span[style^="border"] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google 번역 -->
+    <h1>한글 홈페이지</h1>
+    <div id="google_translate_element" class="hd_lang"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "ko",
+            includedLanguages: "ko,ja,ru,en,fr",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- //Google 번역 -->
+  </body>
+</html>
